@@ -1,10 +1,12 @@
 const express = require("express");
-const config = require("./config");
-const products = require("./api/routes/products");
-const categories = require("./api/routes/categories");
-const dollar = require("./api/routes/dollar");
-const { getAllProductsFromApi } = require("./services/products/getProducts");
-const { handleError } = require("./utils/ResponseHandler");
+const config = require("./server/src/config");
+const products = require("./server/src/api/routes/products");
+const categories = require("./server/src/api/routes/categories");
+const dollar = require("./server/src/api/routes/dollar");
+const {
+  getAllProductsFromApi,
+} = require("./server/src/services/products/getProducts");
+const { handleError } = require("./server/src/utils/ResponseHandler");
 const cron = require("node-cron");
 const storage = require("node-persist");
 const path = require("path");
