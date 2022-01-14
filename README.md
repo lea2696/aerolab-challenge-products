@@ -1,16 +1,16 @@
-#Documentación API
+# Documentación API
 
 La API sólo tiene 3 endpoints:
 
-Productos
+## Productos
 
 /api/products
 
-Categorias
+## Categorias
 
 /api/categories
 
-Dolar
+## Dolar
 
 /api/dollar
 
