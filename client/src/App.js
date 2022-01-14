@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Routes as Switch,
   Route,
+  Navigate,
 } from "react-router-dom";
 import { AppProvider } from "./hooks/useContext";
 
@@ -15,6 +16,7 @@ function App() {
         <Router>
           <Switch>
             <Route element={<Home />} path="/"></Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Switch>
         </Router>
       </AppProvider>
