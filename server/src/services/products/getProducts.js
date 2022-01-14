@@ -1,6 +1,6 @@
 const axios = require("axios");
 const config = require("../../config");
-const { getDollarFromApi } = require("../../services/dollar/getDolllarPrice");
+const { getDollarFromApi } = require("../dollar/getDolllarPrice");
 const storage = require("node-persist");
 const moment = require("moment");
 
@@ -17,7 +17,7 @@ const getProducts = async (req, next) => {
     response = await addDollarPrice(response);
     response = filterProductsByDate(response);
   } catch (err) {
-    next(err);
+    next(err.response);
   }
 
   return response;
